@@ -1,8 +1,10 @@
+let last_color = "#8080ff";
+
 document.getElementById("add").addEventListener("click", function () {
   createItem();
 });
 
-function createItem(name = "", color = "#8080ff") {
+function createItem(name = "", color = last_color) {
   let item = document.createElement("div");
   item.style.background = color;
 
@@ -17,6 +19,7 @@ function createItem(name = "", color = "#8080ff") {
   colorInput.value = color;
   colorInput.addEventListener("change", function () {
     item.style.backgroundColor = colorInput.value;
+    last_color = colorInput.value;
   });
 
   let del = document.createElement("button");
