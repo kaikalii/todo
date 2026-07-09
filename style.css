@@ -3,6 +3,12 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content {
     max-width: 50em;
 }
 
