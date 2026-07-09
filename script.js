@@ -110,10 +110,12 @@ function save() {
     completed: [],
   };
   for (let item of document.getElementById("items").children) {
-    data.items.push({
-      name: item.children[0].value,
-      color: item.children[1].value,
-    });
+    let name = item.children[0].value;
+    if (name.length > 0)
+      data.items.push({
+        name: name,
+        color: item.children[1].value,
+      });
   }
   for (let item of document.getElementById("completed").children) {
     data.completed.unshift({
