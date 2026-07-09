@@ -116,6 +116,7 @@ function save() {
     data.completed.unshift({
       name: item.children[0].textContent,
       time: item.children[1].textContent,
+      color: item.style.backgroundColor,
     });
   }
   localStorage.setItem("data", JSON.stringify(data));
